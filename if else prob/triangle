@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+    int m,a,n;
+    scanf("%d %d %d",&m,&a,&n);
+     int u=m+a+n;
+    printf("%d\n",u);
+    if (u>=180){
+        printf("Valid triangle");
+    }
+    else {
+        printf("not valid triangle");
+    }
+    return 0;
+}
