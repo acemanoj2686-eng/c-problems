@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+    int m,a,n;
+    scanf("%d %d %d",&m,&a,&n);
+    if (m>a&&m>n){
+        printf("%d is largest",m);
+    }
+    else if (a>m&&a>n){
+        printf("%d is largest",a);
+    }
+    else {
+        printf("%d is largest",n);
+    }
+    return 0;
+}
