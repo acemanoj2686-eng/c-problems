@@ -1,0 +1,21 @@
+#include <stdio.h>
+int recur(int n, int a, int b, int c)
+{
+    if(n == 1)
+        return a;
+    else if(n == 2)
+        return b;
+    else if(n == 3)
+        return c;
+    else
+        return recur(n-1,a,b,c) + recur(n-2,a,b,c) + recur(n-3,a,b,c);
+}
+int main()
+{
+    int n,a,b,c;
+    scanf("%d",&n);
+    scanf("%d %d %d",&a,&b,&c);
+    int result = recur(n,a,b,c);
+    printf("%d",result);
+    return 0;
+}
