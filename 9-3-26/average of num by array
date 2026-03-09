@@ -1,0 +1,31 @@
+#include <stdio.h>
+float calculateAverage(int arr[], int n) {
+    int sum = 0;
+    for(int i = 0; i < n; i++) {
+        sum += arr[i];
+    }
+    return (float)sum / n;
+}
+int findMaximum(int arr[], int n) {
+    int max = arr[0];
+    for(int i = 1; i < n; i++) {
+        if(arr[i] > max)
+            max = arr[i];
+    }
+    return max;
+}
+int main() {
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int numbers[n];
+    printf("Enter %d numbers: ", n);
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &numbers[i]);
+    }
+    float avg = calculateAverage(numbers, n);
+    int max = findMaximum(numbers, n);
+    printf("Average of numbers: %.2f\n", avg);
+    printf("Maximum number: %d\n", max);
+    return 0;
+}
